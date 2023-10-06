@@ -80,6 +80,11 @@ io.on('connection', socket => {
     socket.broadcast.emit('fire-reply', square)
   })
 
+  socket.on('chat-message', message => {
+    // Broadcast the chat message to all connected clients
+    io.emit('chat-message', `Player ${playerIndex + 1}: ${message}`);
+  });
+
   // Timeout connection
   setTimeout(() => {
     connections[playerIndex] = null

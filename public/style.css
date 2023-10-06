@@ -299,3 +299,20 @@ body {
   opacity: 1;
   text-decoration: none;
 }
+
+#chatInput {
+  width: 70%;
+  margin-bottom: 10px;
+}
+
+#sendButton {
+  width: 25%;
+  margin-bottom: 10px;
+}
+
+#chatMessages {
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
